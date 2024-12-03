@@ -1,0 +1,114 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+
+.landing-page {
+    height: 100vh;
+    width: 100vw;
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.batman {
+    height: 100%;
+    width: 25%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+}
+
+.batman-left {
+    left: 0;
+}
+
+.batman-middle-left {
+    left: 25%;
+}
+
+.batman-middle-right {
+    right: 25%;
+}
+
+.batman-right {
+    right: 0;
+}
+
+.landing-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: auto;
+    z-index: 10;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: #ffffff; /* White color */
+    cursor: pointer;
+    text-transform: uppercase;
+    animation: bounce 1.5s infinite;
+}
+
+/* Bounce animation for the scroll down text */
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px); /* Increased bounce height */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .batman {
+        width: 50%; /* Adjust image width for mobile */
+    }
+
+    .landing-logo {
+        width: 100px;
+    }
+
+    .scroll-down {
+        font-size: 12px; /* Smaller text on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .batman {
+        width: 100%; /* Make each image take full width */
+        position: relative;
+    }
+
+    .landing-logo {
+        width: 80px;
+    }
+
+    .scroll-down {
+        font-size: 10px; /* Even smaller text on smaller screens */
+    }
+}
+
+

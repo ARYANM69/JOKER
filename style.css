@@ -58,6 +58,7 @@ main {
     height: 80px;
     width: 80px;
     object-fit: cover;
+    cursor: pointer;
 }
 
 nav {
@@ -65,26 +66,6 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 60px;
-}
-
-nav a {
-    color: #D4D4D4;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 200;
-    position: relative;
-}
-
-nav a:not(.logo):before {
-    content: "";
-    position: absolute;
-    height: 40px;
-    width: 1px;
-    top: -180%;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #D4D4D4;
 }
 
 section {
@@ -96,15 +77,6 @@ section {
     margin-top: 50px;
     gap: 15px;
     font-family: "Noto Sans Gothic", sans-serif;
-}
-
-.upper-text {
-    display: flex;
-    align-items: flex-end;
-    gap: 100px;
-    opacity: 0.8;
-    letter-spacing: 2px;
-    font-size: 13px;
 }
 
 .lower-text {
@@ -169,40 +141,6 @@ article .trailer:nth-child(2) {
     color: #fff;
 }
 
-.buttons {
-    position: absolute;
-    bottom: 50px;
-    left: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-button {
-    padding: 10px 20px;
-    font-family: "Poppins", sans-serif;
-    background: #ffffff;
-    outline: none;
-    border: 1px solid #ffffff10;
-    color: #310c0c;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    border-radius: 2px;
-    font-size: 12px;
-    cursor: pointer;
-}
-
-button:nth-child(2) {
-    background: #F5C518;
-    border: 1px solid #ffffff0c;
-}
-
-button i {
-    font-size: 18px;
-}
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .trailer {
@@ -243,10 +181,6 @@ button i {
     nav {
         flex-direction: column;
         gap: 20px;
-    }
-
-    nav a {
-        font-size: 10px;
     }
 }
 

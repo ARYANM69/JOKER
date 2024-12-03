@@ -8,6 +8,8 @@
 body {
     font-family: "Poppins", sans-serif;
     overflow-x: hidden;
+    background-color: #000;
+    color: #fff;
 }
 
 .landing-page {
@@ -19,7 +21,6 @@ body {
     align-items: center;
     position: relative;
     overflow: hidden;
-    flex-wrap: wrap;
 }
 
 .batman {
@@ -30,21 +31,10 @@ body {
     top: 0;
 }
 
-.batman-left {
-    left: 0;
-}
-
-.batman-middle-left {
-    left: 25%;
-}
-
-.batman-middle-right {
-    right: 25%;
-}
-
-.batman-right {
-    right: 0;
-}
+.batman-left { left: 0; }
+.batman-middle-left { left: 25%; }
+.batman-middle-right { right: 25%; }
+.batman-right { right: 0; }
 
 .landing-logo {
     position: absolute;
@@ -54,6 +44,7 @@ body {
     width: 150px;
     height: auto;
     z-index: 10;
+    cursor: pointer;
 }
 
 .scroll-down {
@@ -62,29 +53,30 @@ body {
     left: 50%;
     transform: translateX(-50%);
     font-size: 14px;
-    color: #ffffff; /* White color */
+    color: #ffffff;
     cursor: pointer;
     text-transform: uppercase;
     animation: bounce 1.5s infinite;
 }
 
-/* Bounce animation for the scroll down text */
-@keyframes bounce {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-15px); /* Increased bounce height */
-    }
-    100% {
-        transform: translateY(0);
-    }
+.scroll-down a {
+    text-decoration: none;
+    color: white;
+    font-style: italic;
+    font-size: large;
 }
 
-/* Responsive adjustments */
+/* Bounce animation */
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+/* Mobile responsiveness */
 @media (max-width: 768px) {
     .batman {
-        width: 50%; /* Adjust image width for mobile */
+        width: 50%;
     }
 
     .landing-logo {
@@ -92,13 +84,13 @@ body {
     }
 
     .scroll-down {
-        font-size: 12px; /* Smaller text on mobile */
+        font-size: 12px;
     }
 }
 
 @media (max-width: 480px) {
     .batman {
-        width: 100%; /* Make each image take full width */
+        width: 100%;
         position: relative;
     }
 
@@ -107,8 +99,9 @@ body {
     }
 
     .scroll-down {
-        font-size: 10px; /* Even smaller text on smaller screens */
+        font-size: 10px;
     }
 }
+
 
 

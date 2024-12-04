@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" integrity="sha512-MqL4+Io386IOPMKKyplKII0pVW5e+kb+PI/I3N87G3fHIfrgNNsRpzIXEi+0MQC0sR9xZNqZqCYVcC61fL5+Vg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="https://img.icons8.com/?size=30&id=63454&format=png" type="image/png">
     <title>JOKER</title>
 </head>
 <body>
@@ -60,39 +59,42 @@
             y: -500,
             opacity: 0,
             duration: 2,
-            ease: "power4.inOut"
+            ease: "power4.inOut",
+            delay: 0.5  // Adjusted delay to match first page
         });
         gsap.from(".bg-1", {
             x: -500,
             duration: 2,
             ease: "power4.out",
-            opacity: 0
+            opacity: 0,
+            delay: 0.5  // Adjusted delay to match first page
         });
         gsap.from(".bg-2", {
             x: 500,
             duration: 2,
             ease: "power4.out",
-            opacity: 0
+            opacity: 0,
+            delay: 1  // Adjusted delay to match first page
         });
         gsap.from(".joker", {
             y: 80,
             duration: 2,
             opacity: 0,
             ease: "power4.out",
-            delay: 1.5
+            delay: 2.75  // Added 0.75 seconds delay to match the updated timing
         });
         gsap.from(".lower-text", {
             y: 10,
             duration: 1,
             opacity: 0,
-            delay: 3
+            delay: 3  // Adjusted delay to match first page
         });
         gsap.from(".trailer", {
             y: 20,
             duration: 1,
             opacity: 0,
             delay: 3,
-            stagger: 0.5
+            stagger: 0.5  // Adjusted delay to match first page
         });
     </script>
 </body>
